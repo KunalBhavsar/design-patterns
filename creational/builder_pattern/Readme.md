@@ -4,23 +4,23 @@ The Builder Pattern is a structural design pattern that allows for the construct
 
 ## Key Characteristics:
 
-- Separate Construction from Representation: The Builder pattern separates the construction of an object from its representation. This allows for different types of objects to be created using the same construction process.
-- Fluent Interface: Often, the Builder pattern is implemented using method chaining, which makes it easier to create objects step by step in a fluent and readable manner.
+- **Separate Construction from Representation**: The Builder pattern separates the construction of an object from its representation. This allows for different types of objects to be created using the same construction process.
+- **Fluent Interface**: Often, the Builder pattern is implemented using method chaining, which makes it easier to create objects step by step in a fluent and readable manner.
 
 ## Structure:
 
-- Product: The object being constructed.
-- Builder: The interface for creating parts of the Product. It specifies the steps for assembling a product but doesn’t implement them.
-- ConcreteBuilder: A concrete implementation of the Builder interface that defines how to build the parts of the product.
-- Director: The class responsible for directing the construction process. It controls the building process but doesn’t participate in the creation itself.
-- Client: The object or class that uses the Director and Builder to construct a product.
+- **Product**: The object being constructed.
+- **Builder**: The interface for creating parts of the Product. It specifies the steps for assembling a product but doesn’t implement them.
+- **ConcreteBuilder**: A concrete implementation of the Builder interface that defines how to build the parts of the product.
+- **Director**: The class responsible for directing the construction process. It controls the building process but doesn’t participate in the creation itself.
+- **Client**: The object or class that uses the Director and Builder to construct a product.
 
 ## Advantages:
 
-- Separation of concerns: Construction logic is separate from the actual object.
-- More readable code: Using a builder provides a clear, step-by-step construction process, making code more readable.
-- Easier maintenance: If a product needs additional features or modifications, you can update the builder instead of modifying the client code.
-- Avoids constructor overload: Especially useful when an object has a large number of optional parameters, reducing the need for many constructors.
+- **Separation of concerns**: Construction logic is separate from the actual object.
+- **More readable code**: Using a builder provides a clear, step-by-step construction process, making code more readable.
+- **Easier maintenance**: If a product needs additional features or modifications, you can update the builder instead of modifying the client code.
+- **Avoids constructor overload**: Especially useful when an object has a large number of optional parameters, reducing the need for many constructors.
 
 ## Usage/Examples
 
@@ -129,11 +129,11 @@ public class BuilderPatternExample {
 
 ## Explanation:
 
-- Car: The Product we want to build. It has various attributes like engine, wheels, and color.
-- CarBuilder: The interface that defines the steps needed to construct a Car. It provides methods to set various attributes.
-- ConcreteCarBuilder: A concrete implementation of CarBuilder that provides the actual steps for constructing the car.
-- CarDirector: The Director class, which orchestrates the building process and provides different configurations, such as a sports car or a family car.
-- Client: The client uses the builder through the director to create the cars. It is not concerned with the details of how the car is built.
+- **Car**: The Product we want to build. It has various attributes like engine, wheels, and color.
+- **CarBuilder**: The interface that defines the steps needed to construct a Car. It provides methods to set various attributes.
+- **ConcreteCarBuilder**: A concrete implementation of CarBuilder that provides the actual steps for constructing the car.
+- **CarDirector**: The Director class, which orchestrates the building process and provides different configurations, such as a sports car or a family car.
+- **Client**: The client uses the builder through the director to create the cars. It is not concerned with the details of how the car is built.
 
 ## Real-World Example:
 

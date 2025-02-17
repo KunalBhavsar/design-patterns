@@ -4,23 +4,23 @@ The Singleton Pattern is a design pattern that ensures a class has only one inst
 
 ## Key Characteristics:
 
-- Single Instance: The class only allows a single instance to be created.
-- Global Access: The single instance is accessible globally through a static method or property.
-- Lazy Instantiation: The instance is typically created when it's first needed (lazily), rather than at the time of program startup.
-- Thread-Safety: In multi-threaded environments, care must be taken to ensure that the instance is created only once, even when multiple threads are trying to access it simultaneously
+- **Single Instance**: The class only allows a single instance to be created.
+- **Global Access**: The single instance is accessible globally through a static method or property.
+- **Lazy Instantiation**: The instance is typically created when it's first needed (lazily), rather than at the time of program startup.
+- **Thread-Safety**: In multi-threaded environments, care must be taken to ensure that the instance is created only once, even when multiple threads are trying to access it simultaneously
 
 ## Structure:
 
-- Singleton Class: The class that ensures only one instance exists.
-- Static Instance: A static variable holds the instance of the class.
-- Static Method: A static method (often called getInstance()) provides access to the instance.
+- **Singleton Class**: The class that ensures only one instance exists.
+- **Static Instance**: A static variable holds the instance of the class.
+- **Static Method**: A static method (often called getInstance()) provides access to the instance.
 
 ## Types of Singleton Implementations:
 
-- Lazy Initialization (Thread-Safe): The instance is created when it’s first requested.
-- Eager Initialization: The instance is created at the start of the program, regardless of whether it is needed or not.
-- Double-Checked Locking: A more efficient thread-safe implementation that checks if the instance is null twice to minimize locking overhead.
-- Bill Pugh Singleton (Singleton Holder Pattern): Uses the static inner class to lazily load the Singleton instance in a thread-safe manner.
+- **Lazy Initialization (Thread-Safe)**: The instance is created when it’s first requested.
+- **Eager Initialization**: The instance is created at the start of the program, regardless of whether it is needed or not.
+- **Double-Checked Locking**: A more efficient thread-safe implementation that checks if the instance is null twice to minimize locking overhead.
+- **Bill Pugh Singleton (Singleton Holder Pattern)**: Uses the static inner class to lazily load the Singleton instance in a thread-safe manner.
 
 ## Usage/Examples (Basic Singleton):
 
@@ -95,8 +95,8 @@ public class Singleton {
 
 ### Explaination of Thread-Safe Version:
 
-- volatile: The volatile keyword ensures that changes to the instance variable are visible to all threads immediately. Without this, threads could potentially read a stale value.
-- Double-Checked Locking: The first check (if (instance == null)) is outside the synchronized block for performance reasons. If the instance is already created, it skips the synchronized block. Inside the synchronized block, the check is repeated to ensure only one instance is created even in multi-threaded environments.
+- **volatile**: The volatile keyword ensures that changes to the instance variable are visible to all threads immediately. Without this, threads could potentially read a stale value.
+- **Double-Checked Locking**: The first check (if (instance == null)) is outside the synchronized block for performance reasons. If the instance is already created, it skips the synchronized block. Inside the synchronized block, the check is repeated to ensure only one instance is created even in multi-threaded environments.
 
 ## Usage/Examples - Bill Pugh Singleton (Most Efficient Thread-Safe Singleton):
 
@@ -130,15 +130,15 @@ The SingletonHelper class is loaded and initialized only when the getInstance() 
 
 ## Advantages of the Singleton Pattern:
 
-- Controlled Access to Resources: Ensures only one instance is used, which is useful for resource management (like database connections or logging).
-- Lazy Initialization: The Singleton instance is only created when needed, avoiding unnecessary resources being used at the start.
-- Global Access: The single instance is easily accessible throughout the application.
+- **Controlled Access to Resources**: Ensures only one instance is used, which is useful for resource management (like database connections or logging).
+- **Lazy Initialization**: The Singleton instance is only created when needed, avoiding unnecessary resources being used at the start.
+- **Global Access**: The single instance is easily accessible throughout the application.
 
 ## Disadvantages of the Singleton Pattern:
 
-- Global State: The Singleton acts as a global instance, which can lead to hidden dependencies between classes, making code harder to test and maintain.
-- Testing Issues: Because the Singleton is globally accessible, it can be difficult to mock or replace in unit tests. This can break the Single Responsibility Principle if not carefully used.
-- Tight Coupling: Classes that depend on the Singleton are tightly coupled to it, which can reduce flexibility.
+- **Global State**: The Singleton acts as a global instance, which can lead to hidden dependencies between classes, making code harder to test and maintain.
+- **Testing Issues**: Because the Singleton is globally accessible, it can be difficult to mock or replace in unit tests. This can break the Single Responsibility Principle if not carefully used.
+- **Tight Coupling**: Classes that depend on the Singleton are tightly coupled to it, which can reduce flexibility.
 
 ## Real-World Example:
 
