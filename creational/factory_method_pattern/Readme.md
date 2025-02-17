@@ -4,7 +4,6 @@ The Factory Method Pattern is a creational design pattern that provides an inter
 
 ## Key Characteristics:
 
-- **Creational Pattern**: The Factory Method is a creational design pattern that provides an interface for creating objects, but allows subclasses to alter the type of objects that will be created.
 - **Delegates Object Creation**: The responsibility for object creation is delegated to a method, allowing the creation process to be deferred to subclasses or other classes that implement the method.
 - **Decouples Object Creation**: It decouples the class instantiation process from the code that uses the objects, promoting flexibility and reducing dependencies.
 - **Extensibility**: New object types can be added without modifying the existing code by creating new subclasses that implement the factory method.
@@ -108,9 +107,8 @@ In the client code, we use the concrete creator (PdfDocumentCreator, WordDocumen
 
 ## Real-World Example:
 
-GUI Frameworks: In GUI frameworks, the Factory Method can be used to create different types of UI components (like buttons, checkboxes) depending on the platform (Windows, Mac, Linux) without altering the core application logic.
-Document Editors: For document editors that support multiple formats (PDF, Word, HTML), a factory method can be used to create different document objects based on the chosen format.
-Vehicle Manufacturing: A vehicle manufacturing system could use a Factory Method to create different types of vehicles (car, truck, motorcycle) based on user specifications.
+- GUI Frameworks: In GUI frameworks, the Factory Method can be used to create different types of UI components (like buttons, checkboxes) depending on the platform (Windows, Mac, Linux) without altering the core application logic.
+- Vehicle Manufacturing: A vehicle manufacturing system could use a Factory Method to create different types of vehicles (car, truck, motorcycle) based on user specifications.
 
 ## Conclusion:
 
