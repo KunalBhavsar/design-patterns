@@ -12,9 +12,9 @@
   We will be covering following creational patterns :
   - [Builder pattern](./creational/builder_pattern/Readme.md)
   - [Singleton pattern](./creational/singleton_pattern/Readme.md)
-  - Prototype pattern
-  - Factory method pattern
-  - Abstract factory pattern
+  - [Prototype pattern] (./creational/prototype_pattern/Readme.md)
+  - [Factory method pattern] (./creational/factory_method_pattern/Readme.md)
+  - [Abstract factory pattern] (./creational/abstract_factory_pattern/Readme.md)
 
  ## Structural Design Patterns
   Structural design patterns are design patterns that deal with object composition. They identify simple ways to realize relationships between different objects. They help ensure that if one part of a system changes, the entire system doesn't need to do the same. They make systems more flexible and efficient.
